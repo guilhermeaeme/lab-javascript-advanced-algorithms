@@ -3,59 +3,59 @@ var stack = new StackDataStructure();
 stack.MAX_SIZE = 8;
 
 $(function(){
-	var $input_text = $('#input-text');
+	var $input_stack = $('#input-stack');
 
-	$('#form').submit(function(e){
+	$('#stack-form').submit(function(e){
 		e.preventDefault();
 
-		var value = $input_text.val();
+		var value = $input_stack.val();
 
 		if(!value) return;
 
-		$input_text.val('');
+		$input_stack.val('');
 
 		var result = stack.push(value);
 
-		$('#item-overflow, #item-underflow').addClass('hidden');
-		$('#item-take').html('');
+		$('#stack-item-overflow, #stack-item-underflow').addClass('hidden');
+		$('#stack-item-take').html('');
 
 		if(Array.isArray(result)) {
-			$('.item')
+			$('#stack .item')
 				.removeClass('active')
 				.html('&nbsp;')
 
 			stack.stackControl.forEach(function(item, index){
-				$('#item-' + (index + 1))
+				$('#stack-item-' + (index + 1))
 					.addClass('active')
 					.html(item)
 			});
 		} else {
-			$('#item-overflow').removeClass('hidden');
+			$('#stack-item-overflow').removeClass('hidden');
 		}
 	});
 
-	$('#btn-take').click(function(e){
+	$('#stack-btn-take').click(function(e){
 		e.preventDefault();
 
 		var result = stack.pop(stack.stackControl[stack.stackControl.length-1]);
 
-		$('#item-overflow, #item-underflow').addClass('hidden');
-		$('#item-take').html('');
+		$('#stack-item-overflow, #stack-item-underflow').addClass('hidden');
+		$('#stack-item-take').html('');
 
-		$('.item')
+		$('#stack .item')
 			.removeClass('active')
 			.html('&nbsp;')
 
 		stack.stackControl.forEach(function(item, index){
-			$('#item-' + (index + 1))
+			$('#stack-item-' + (index + 1))
 				.addClass('active')
 				.html(item)
 		});
 
 		if(result == 'Stack Underflow') {
-			$('#item-underflow').removeClass('hidden');
+			$('#stack-item-underflow').removeClass('hidden');
 		} else {
-			$('#item-take').html(result);
+			$('#stack-item-take').html(result);
 		}
 	});
 });

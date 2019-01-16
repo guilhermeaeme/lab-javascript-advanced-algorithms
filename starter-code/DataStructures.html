@@ -12,39 +12,84 @@
     <h1>Abstract Data Types</h1>
 
     <div class="row">
-      <div class="col-xs-10 col-sm-6 col-md-4">
-        <form id="form">
-          <div class="form-group">
-            <input type="text" id="input-text" class="form-control" value="" placeholder="Add the element to the stack..." />
+      <div class="col-xs-12 col-sm-6">
+        
+        <div id="stack" class="row">
+          <div class="col-xs-10 col-sm-6">
+            <form id="stack-form">
+              <div class="form-group">
+                <input type="text" id="input-stack" class="form-control" value="" placeholder="Add the element to the stack..." />
+              </div>
+
+              <div class="form-group">
+                <button type="submit" id="stack-btn-add" class="btn btn-block btn-primary">ADD</button>  
+              </div>
+
+              <div class="form-group">
+                <button type="button" id="stack-btn-take" class="btn btn-block btn-danger">TAKE</button>  
+              </div>
+            </form>
+
+            <div class="list-group">
+              <div id="stack-item-overflow" class="list-group-item list-group-item-danger hidden">Stack Overflow</div>
+              <div id="stack-item-8" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-7" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-6" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-5" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-4" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-3" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-2" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-1" class="item list-group-item">&nbsp;</div>
+              <div id="stack-item-underflow" class="list-group-item list-group-item-danger hidden">Stack Underflow</div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <button type="submit" id="btn-add" class="btn btn-block btn-primary">ADD</button>  
+          <div class="col-xs-2 col-sm-4">
+            <h2 id="stack-item-take"></h2>
           </div>
-
-          <div class="form-group">
-            <button type="button" id="btn-take" class="btn btn-block btn-danger">TAKE</button>  
-          </div>
-        </form>
-
-        <div class="list-group">
-          <div id="item-overflow" class="list-group-item list-group-item-danger hidden">Stack Overflow</div>
-          <div id="item-8" class="item list-group-item">&nbsp;</div>
-          <div id="item-7" class="item list-group-item">&nbsp;</div>
-          <div id="item-6" class="item list-group-item">&nbsp;</div>
-          <div id="item-5" class="item list-group-item">&nbsp;</div>
-          <div id="item-4" class="item list-group-item">&nbsp;</div>
-          <div id="item-3" class="item list-group-item">&nbsp;</div>
-          <div id="item-2" class="item list-group-item">&nbsp;</div>
-          <div id="item-1" class="item list-group-item">&nbsp;</div>
-          <div id="item-underflow" class="list-group-item list-group-item-danger hidden">Stack Underflow</div>
         </div>
-      </div>
 
-      <div class="col-xs-2 col-sm-6 col-md-8">
-        <h2 id="item-take"></h2>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        
+        <div id="queue" class="row">
+          <div class="col-xs-10 col-sm-6">
+            <form id="queue-form">
+              <div class="form-group">
+                <input type="text" id="input-queue" class="form-control" value="" placeholder="Add the element to the queue..." />
+              </div>
+
+              <div class="form-group">
+                <button type="submit" id="queue-btn-add" class="btn btn-block btn-primary">ENQUEUE</button>  
+              </div>
+
+              <div class="form-group">
+                <button type="button" id="queue-btn-take" class="btn btn-block btn-danger">DEQUEUE</button>  
+              </div>
+            </form>
+
+            <div class="list-group">
+              <div id="queue-item-overflow" class="list-group-item list-group-item-danger hidden">Queue Overflow</div>
+              <div id="queue-item-8" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-7" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-6" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-5" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-4" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-3" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-2" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-1" class="item list-group-item">&nbsp;</div>
+              <div id="queue-item-underflow" class="list-group-item list-group-item-danger hidden">Queue Underflow</div>
+            </div>
+          </div>
+
+          <div class="col-xs-2 col-sm-4">
+            <h2 id="queue-item-take"></h2>
+          </div>
+        </div>
+
       </div>
     </div>
+
   </section>
 
   <script src="src/StackDataStructure.js"></script>
