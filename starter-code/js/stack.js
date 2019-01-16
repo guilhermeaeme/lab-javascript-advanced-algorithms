@@ -17,6 +17,7 @@ $(function(){
 		var result = stack.push(value);
 
 		$('#item-overflow, #item-underflow').addClass('hidden');
+		$('#item-take').html('');
 
 		if(Array.isArray(result)) {
 			$('.item')
@@ -39,6 +40,7 @@ $(function(){
 		var result = stack.pop(stack.stackControl[stack.stackControl.length-1]);
 
 		$('#item-overflow, #item-underflow').addClass('hidden');
+		$('#item-take').html('');
 
 		$('.item')
 			.removeClass('active')
@@ -52,6 +54,8 @@ $(function(){
 
 		if(result == 'Stack Underflow') {
 			$('#item-underflow').removeClass('hidden');
+		} else {
+			$('#item-take').html(result);
 		}
 	});
 });
