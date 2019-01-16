@@ -10,12 +10,12 @@ function QueueDataStructure () {
 		return (this.queueControl.length < this.MAX_SIZE);
 	};
 
-	this.queue = function(item) {
+	this.queue = function() {
 		if(this.queueControl.length == 0) {
 			return 'Queue Underflow';
 		}
 
-		return this.queueControl.pop(item);
+		return this.queueControl.pop();
 	};
 
 	this.enqueue = function(item) {

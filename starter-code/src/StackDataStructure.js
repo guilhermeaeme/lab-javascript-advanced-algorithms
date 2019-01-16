@@ -10,12 +10,12 @@ function StackDataStructure () {
 		return (this.stackControl.length < this.MAX_SIZE);
 	};
 
-	this.pop = function(item) {
+	this.pop = function() {
 		if(this.stackControl.length == 0) {
 			return 'Stack Underflow';
 		}
 
-		return this.stackControl.pop(item);
+		return this.stackControl.pop();
 	};
 
 	this.push = function(item) {
